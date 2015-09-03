@@ -1,0 +1,61 @@
+define([
+  'underscore'
+  , 'backbone'
+  , 'jquery'
+  ,'handlebars'
+  ,'dashboard/collection/dashboard-collection'
+  ,'text!templates/dashboard/dashboard-nav.hbs'
+  ,'events'
+], function (_, Backbone, $,handlebars,collection,templates,Events) {
+     NavView = Backbone.View.extend({
+		el:'#dashboard-nav',
+		events:{
+		
+		"click li":"bye"
+		
+		},
+		template: Handlebars.compile(templates),
+        initialize: function(){
+            console.log("dashboard-nav is loaded");
+			//$('body').append('<h1>test1 View is loaded</h1>');
+        },
+		
+		render: function(){
+		console.log("dashboard-nav :: rendering loading");
+		
+		this.$el.append(this.template(GLOBALVAR.holidays));
+		},
+		bye: function(e){
+		var Id;
+		var currentEle;
+		if($(e.target).attr('class') == 'left-nav'){
+		currentEle = $(e.target);
+		Id = parseInt($(e.target).attr('id'));
+		}
+		else{
+		 Id = parseInt($(e.target).parent().attr('id'));
+		 currentEle = $(e.target).parent();
+		 }
+		
+		
+		$('.left-nav').each(function(){
+		if($(this).attr('id') != currentEle.attr('id')){
+		$(this).removeClass('selected');
+		 $(this).unbind( "click" );
+		
+		}
+                else{
+                 currentEle.addClass('selected');
+				 currentEle.bind('click', false);
+                      }
+		
+		});
+		
+		Events.trigger('GetData',Id);
+		
+		}
+		
+    });
+return new NavView();
+});
+		

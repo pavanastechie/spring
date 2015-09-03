@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/jtg/!svn/ver/7/scintra/codebase/bpoc/bhr/templates/login
+END
+credits.hbs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/jtg/!svn/ver/7/scintra/codebase/bpoc/bhr/templates/login/credits.hbs
+END
+login-view.hbs
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/jtg/!svn/ver/7/scintra/codebase/bpoc/bhr/templates/login/login-view.hbs
+END

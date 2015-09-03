@@ -1,0 +1,12 @@
+com\sci\user\config\AppConfig.class
+com\sci\user\config\SecurityConfig.class
+com\sci\user\service\UserAuthenticationService.class
+com\sci\user\config\UserConfig.class
+com\sci\user\controller\UserController.class
+com\sci\user\model\User.class
+com\sci\user\dao\UserDAOImpl.class
+com\sci\user\dao\UserDAO.class
+com\sci\user\config\SpringSecurityInitializer.class
+com\sci\user\service\UserServiceImpl.class
+com\sci\user\config\SpringMvcInitializer.class
+com\sci\user\service\UserService.class

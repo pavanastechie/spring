@@ -1,0 +1,30 @@
+<section class="container">
+    <div class="login">
+      <h1>LOGIN TO SCI INTRA</h1>
+      <form method="post" action="index.html">
+        <p><input type="text" name="login" id="username" value="" placeholder="Username"></p>
+        <p><input type="password" name="password" id="password" value="" placeholder="Password"></p>
+        <p class="remember_me">
+          <label>
+            <input type="checkbox" name="remember_me" id="remember_me">
+            Remember me on this computer
+          </label>
+        </p>
+        <p class="submit"><input id="button" type="button" name="commit" value="Login"></p>
+      </form>
+    </div>
+
+    <div class="login-help">
+      <p> <a href="javascript:void(0)" id="button1">FOR USERNAME AND PASSWORD CLICK HERE</a>.</p>
+    </div>
+	<div id="hint"></div>
+  </section>
+
+  <section class="about">
+    
+    <p class="about-author">
+	Developed By JTG Group
+      </p>
+  </section>
+
+</div>

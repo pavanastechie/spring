@@ -1,0 +1,5 @@
+require(['./main','login/view/login-view'], function (main,LoginView) {
+  
+	return console.log("main.js is loaded");
+	
+});

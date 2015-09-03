@@ -1,0 +1,44 @@
+var GLOBALVAR = window.GLOBALVAR || {};
+GLOBALVAR.credits = {};
+GLOBALVAR.holidays = {};
+
+
+require.config({
+   
+    paths: {
+        'jquery': 'vendor/jquery.min',
+        'backbone': 'vendor/backbone-min',
+        'underscore': 'vendor/underscore-min',
+        'text': 'vendor/text',
+		'handlebars':'vendor/handlebars.min'
+		,templates: '../templates'
+    },
+     shim: {
+        underscore: {
+      exports: "_"
+    },
+	jquery: {
+      exports: "$"
+    },
+    backbone: {
+      deps: ['underscore', 'jquery'],
+      exports: 'Backbone'
+    },
+    },
+    deps: ['require'],
+});
+
+
+{require([
+   ""]
+   , function () {
+console.log("require.config is loaded");
+ });
+}
+
+// {require([
+  // "test"]
+  // , function (test) {
+
+// });
+//}

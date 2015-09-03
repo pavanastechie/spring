@@ -1,0 +1,59 @@
+
+
+
+LoadMessageDetail <msgId>
+    [ email/view/email-message.js ]
+    Triggers the loading/displaying of message details.
+
+ViewMessage <folder> <msgId>
+    [ email/email-bottom-pane.js]
+    Inserts a message preview view into the bottom pane using hte folder and message ID supplied.
+    Triggers: <LoadMessageDetail>
+
+HideAuxiliaryView
+    [ email/email.js ]
+    Hides the Auxiliary view panel (aka: Preview panel)
+
+ShowAuxiliaryView
+    [ email/email.js ]
+    Shows the Auxiliary view panel (aka: Preview panel) using the previously set size.
+
+MaximizeAuxiliaryView
+    [ email/email.js ]
+    Shows the Auxiliary view panel and sets it to full height. The normal (center) panel is hidden.
+
+selectFolderView
+    [ email/view/email-list.js]
+    Selects a folder for display in the email message list
+
+ViewBottomContent <template> <template-data>
+    [ email/view/email-bottom-pane.js]
+    Shows the given template/data in the bottom pane.
+
+ShowFullMessageView <folder> <messageId>
+    [ email/view/email-body.js]
+    Shows a message view in the center pane ("maximized view")
+
+RefreshToolbar
+    [ email/view/email-toolbar.js ]
+    Updates the toolbar, putting in the selection mode appropriate for the current list state
+
+RefreshEmail
+    [ email/view/email-list.js ]
+    Refreshes the current mail list (same folder, same page, same search parameters)
+
+SetViewedMessageFlag <flag-name> <flag-value>
+    [ email/view/email-message.js ]
+    Sets a flag on the currently viewed message.
+
+RefreshMessageViewState
+    [ email/view/email-message.js ]
+    Refreshes local state of the message view, without fetching data from the backend.
+
+SelectToolbarGroupItem <group_name> <element_id>
+    [ email/view/email-toolbar.js ]
+    Selects an item from a named group of items in the toolbar.
+
+ComposeSetFormat [1|2]
+    [ email/view/email-compose.js ]
+    Sets the composition format. 1 = plain, 2 = html

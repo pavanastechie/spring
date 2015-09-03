@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/jtg/!svn/ver/7/scintra/codebase/bpoc/bhr/templates/dashboard
+END
+dashboard-toolbar.hbs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/jtg/!svn/ver/7/scintra/codebase/bpoc/bhr/templates/dashboard/dashboard-toolbar.hbs
+END
+dashboard-nav.hbs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/jtg/!svn/ver/7/scintra/codebase/bpoc/bhr/templates/dashboard/dashboard-nav.hbs
+END
+dashboard-details.hbs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/jtg/!svn/ver/7/scintra/codebase/bpoc/bhr/templates/dashboard/dashboard-details.hbs
+END
+dashboard-home.hbs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/jtg/!svn/ver/7/scintra/codebase/bpoc/bhr/templates/dashboard/dashboard-home.hbs
+END
+dashboard-body.hbs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/jtg/!svn/ver/7/scintra/codebase/bpoc/bhr/templates/dashboard/dashboard-body.hbs
+END

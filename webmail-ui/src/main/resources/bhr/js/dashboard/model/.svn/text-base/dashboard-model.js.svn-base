@@ -1,0 +1,16 @@
+define([
+  'underscore'
+  , 'backbone'
+  , 'jquery'
+  
+], function (_, Backbone, $) {
+ Model = Backbone.Model.extend({
+        initialize: function(){
+            console.log("dashboard model is loaded");
+			//$('body').append("<h3> test1 model is loaded</h3>");
+        }
+    });
+    
+    return new Model();
+
+});

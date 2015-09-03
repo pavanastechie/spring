@@ -1,0 +1,25 @@
+define([
+  'underscore'
+  , 'backbone'
+  , 'jquery'
+  ,'handlebars'
+  ,'dashboard/collection/dashboard-collection'
+  ,'text!templates/dashboard/dashboard-toolbar.hbs'
+  
+], function (_, Backbone, $,handlebars,collection,templates) {
+     ToolBarView = Backbone.View.extend({
+         el:'#dashboard-toolbar',
+		 template:Handlebars.compile(templates),
+        initialize: function(){
+            console.log("dashboard-toolbar is loaded");
+			this.render();
+			//$('body').append('<h1>test1 View is loaded</h1>');
+        },
+		
+		render: function(){
+		console.log("dashboard toolbar :: rendering loading");
+		this.$el.append(this.template);
+		}
+    });
+return new ToolBarView();
+});

@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "date": "01-Jan-2014",
+        "day": "Wednesday",
+        "event": "New Year Day",
+        "description": "New Year is the time at which a new calendar year begins and the calendar's year count is incremented. In many cultures, the event is celebrated in some manner.[1] The New Year of the Gregorian calendar, today in worldwide use, falls on 1 January (New Year's Day), as was the case with both the old Roman calendar and the Julian calendar that succeeded it. The order of months was January to December in the Old Roman calendar during the reign of King Numa Pompilius in about 700 BC, according to Plutarch and Macrobius, and has been in continuous use since that time. In many countries, such as the Czech Republic, Italy, Spain, the UK, and the United States, 1 January is a national holiday."
+    },
+    {
+        "id": 2,
+        "date": "15-Jan-2014",
+        "day": "Wednesday",
+        "event": "Sankranti",
+        "description": "Sankranti means transmigration of the Sun from one Rāshi (constellation of the zodiac in Indian astronomy) to the next.[1] Hence, there are 12 Sankrantis in a year.[2] Each Sankranti is marked as the beginning of a month in the sidereal solar calendars followed in Tamil Nadu, Kerala, Odisha, Punjab. On the other hand, in the sidereal solar Bengali calendar and Assamese calendar, a Sankranti is marked as the end of each month and the day following as the beginning of a new month."
+    },
+    {
+        "id": 3,
+        "date": "31-Mar-2014",
+        "day": "Monday",
+        "event": "Ugadi",
+        "description": "New Year's Day for the people of the Deccan region of India. The name Yugadi or Ugadi is derived from the Sanskrit words yuga (age) and ādi (beginning). It falls on a different day every year because the Hindu calendar is a lunisolar calendar. The Saka calendar begins with the month of Chaitra (March–April) and Ugadi marks the first day of the new year. Chaitra is the first month in Panchanga which is the Indian calendar."
+    },
+    {
+        "id": 4,
+        "date": "15-Aug-2014",
+        "day": "Friday",
+        "event": "Independence day",
+        "description": "independence Day, observed annually on 15 August, is a National Holiday in India commemorating the nation's independence from the British Empire on 15 August 1947. India attained independence following an Independence Movement noted for largely nonviolent resistance and civil disobedience led by the Indian National Congress (INC).[1] Independence coincided with the partition of India, in which the British Indian Empire was divided along religious lines into the Dominions of India and Pakistan; the partition was accompanied by violent riots and mass casualties, and the displacement of nearly 15 million people due to sectarian violence."
+    },
+    {
+        "id": 5,
+        "date": "29-Aug-2014",
+        "day": "Friday",
+        "event": "Vinayaka Chavithi",
+        "description": "ganesha Chaturthi is the Hindu festival celebrated in honour of the god Ganesha, the elephant-headed, remover of obstacles and the god of beginnings and wisdom. The festival, also known as Vinayaka Chaturthi, is observed in the Hindu calendar month of Bhaadrapada, starting on the shukla chaturthi (fourth day of the waxing moon period). The date usually falls between 19 August and 20 September. The festival lasts for 10 days, ending on Anant Chaturdashi"
+    }
+]

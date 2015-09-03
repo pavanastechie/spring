@@ -1,0 +1,23 @@
+
+<div id="details"> 
+<table>
+ {{#each .}}  
+      <tr id="{{id}}">   
+		<td><h2>Event/Festival</h2></td>   <td><h2> {{event}}</h2></td>
+		</tr>
+		
+		<tr>   
+		<td><h2>Date</h2></td>   <td><h2> {{date}}</h2></td>
+		</tr>
+		
+		<tr>   
+		<td><h2>Day</h2></td>   <td><h2> {{day}}</h2></td>
+		</tr>
+		
+		<tr>   
+		<td><h2>Description</h2></td>   <td><h2> {{description}}</h2></td>
+		</tr>
+		 
+    {{/each}}
+	</table>
+	</div>

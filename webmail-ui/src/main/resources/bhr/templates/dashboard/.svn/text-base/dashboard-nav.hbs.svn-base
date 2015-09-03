@@ -1,0 +1,12 @@
+<div class="column-left">
+      <h3>LIST OF HOLIDAYS</h3>
+	  <hr/>
+	  <ul>
+	   {{#each .}}  
+         
+		 
+		 <li id="{{id}}" class="left-nav"><a href="javascript:void(0)" class="event-list">{{event}}</a></li>
+		 
+    {{/each}}
+	</ul>
+    </div>

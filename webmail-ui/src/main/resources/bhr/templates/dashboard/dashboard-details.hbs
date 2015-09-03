@@ -1,0 +1,28 @@
+
+<div id="details"> 
+<table>
+ {{#each .}}  
+      <tr id="{{id}}">   
+		<td><h2>Userid</h2></td>   <td><h2> {{id}}</h2></td>
+		</tr>
+		
+		<tr>   
+		<td><h2>Username</h2></td>   <td><h2> {{username}}</h2></td>
+		</tr>
+		
+		<tr>   
+		<td><h2>Email</h2></td>   <td><h2> {{email}}</h2></td>
+		</tr>
+		
+		<tr>   
+		<td><h2>Role</h2></td>   <td><h2> {{role}}</h2></td>
+		</tr>
+		 
+    {{/each}}
+	</table>
+	{{#each .}}  
+	<input id="edit-user" data-id="{{id}}" style=" width: 120px;margin-bottom: 10px; margin-top: 10px;" class="btn btn-primary" type="button" value="Edit User"/>
+	<input id="delete-user" data-id="{{id}}" style="width: 120px;" class="btn btn-primary" type="button" value="Delete User"/>
+	 {{/each}}
+	</div>
+	

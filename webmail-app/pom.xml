@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.web.platform.mail</groupId>
+  <artifactId>platform-webmail-app</artifactId>
+  <name>platform-webmail-app</name>
+  <packaging>war</packaging>
+  <version>2.1.1-SNAPSHOT</version>
+
+  <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java-version>1.7</java-version>
+		<org.springframework-version>4.1.0.RELEASE</org.springframework-version>
+		<spring.security.version>3.2.3.RELEASE</spring.security.version>
+		<hibernate.version>4.3.5.Final</hibernate.version>
+		<dbcp.version>1.4</dbcp.version>
+		<mysql.connector.version>5.1.30</mysql.connector.version>
+		<jackson.version>2.3.0</jackson.version>
+		<servletapi.version>3.1.0</servletapi.version>
+		<servletapi.jsp.version>2.3.1</servletapi.jsp.version>
+		<jstl.version>1.2</jstl.version>
+		<jackson.databind-version>2.2.3</jackson.databind-version>
+		<log4j.version>1.2.17</log4j.version>
+
+
+	</properties>
+
+	<dependencies>
+
+		<!-- Spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${org.springframework-version}</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- Spring Security -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+
+		<!-- database pool -->
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>${dbcp.version}</version>
+		</dependency>
+
+	   <dependency>
+		<groupId>org.apache.commons</groupId>
+		<artifactId>commons-dbcp2</artifactId>
+		<version>2.0</version>
+	   </dependency>
+		
+
+		<!-- MySQL JDBC Driver -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.connector.version}</version>
+		</dependency>
+
+		<!-- Hibernate -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+		<!-- Servlet -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servletapi.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>javax.servlet.jsp-api</artifactId>
+			<version>${servletapi.jsp.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${jstl.version}</version>
+		</dependency>
+
+		<!-- Jackson -->
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+
+		<!-- Logging: log4j -->
+	
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+
+		
+	</dependencies>
+
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+          <showWarnings>true</showWarnings>
+        </configuration>
+        <version>3.0</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <configuration>
+          <warName>neomail</warName>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>
+        <version>2.3</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.15</version>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>cobertura-maven-plugin</artifactId>
+        <version>2.6</version>
+        <configuration>
+          <instrumentation>
+            <excludes>
+              <exclude>com/web/neomail/api/model/**/*.class</exclude>
+              <exclude>com/web/neomail/ui/model/**/*.class</exclude>
+              <exclude>com/web/neomail/api/ApiConstants.class</exclude>
+              <exclude>com/web/neomail/api/MessageConstants.class</exclude>
+              <exclude>com/web/neomail/api/UrlConstants.class</exclude>
+              <exclude>com/web/neomail/api/validation/ValidationCodes.class</exclude>
+              <exclude>com/web/neomail/controller/ui/model/**/*.class</exclude>
+              <exclude>com/web/neomail/controller/stub/*.class</exclude>
+              <exclude>com/web/**/*Test.class</exclude>
+            </excludes>
+          </instrumentation>
+          <formats>
+            <format>xml</format>
+            <format>html</format>
+          </formats>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+<profiles>
+ <profile>
+   <id>profile-development</id>
+   <activation>
+     <activeByDefault>true</activeByDefault>
+     <property>
+       <name>environment</name>
+       <value>dev</value>
+     </property>
+   </activation>
+ </profile>
+ <profile>
+   <id>profile-production</id>
+   <activation>
+    <property>
+      <name>environment</name>
+      <value>prod</value>
+    </property>
+   </activation>
+ </profile>
+</profiles>
+
+</project>

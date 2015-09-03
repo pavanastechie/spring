@@ -1,0 +1,37 @@
+define([
+  'underscore'
+  , 'backbone'
+  , 'jquery'
+  ,'handlebars'
+  ,'dashboard/collection/dashboard-collection'
+  ,'text!templates/dashboard/dashboard-details.hbs'
+  ,'events'
+], function (_, Backbone, $,handlebars,collection,templates,Events) {
+     HomeView = Backbone.View.extend({
+		el:'#dashboard-body',
+		model:'',
+		template:Handlebars.compile(templates),
+        initialize: function(){
+		this.listenTo(Events, 'GetData', this.getData);
+            console.log("dashboard-details is loaded");
+			//$('body').append('<h1>test1 View is loaded</h1>');
+        },
+		
+		render: function(){
+		console.log("dashboard-details :: rendering loading");
+		this.$el.find('.column-right').find('.box-in').append(this.template(this.model));
+		},
+		getData: function(data){
+		
+		this.model = _.where(GLOBALVAR.holidays, {id: data});
+		
+		 if(data != $('#details').find('table').find('tr').attr('id')){
+		 $('#details').remove();
+		 this.render();
+		 }
+		
+		$('#home').hide();
+		}
+    });
+return new HomeView();
+});

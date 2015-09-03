@@ -1,0 +1,39 @@
+({
+  appDir: "../resources/js",
+  baseUrl: ".",
+  dir: "../resources/dist",
+  modules: [
+    {
+      name: "app/email/email"
+    }
+  ],
+  removeCombined: true,
+  paths: {
+    'handlebars': "vendor/handlebars",
+    'underscore': "vendor/underscore-min",
+    'backbone': "vendor/backbone-min",
+    'backbone.localStorage': "vendor/backbone.localStorage-min",
+    'backbone-relational': "vendor/backbone-relational",
+    'jquery': "vendor/require-jquery",
+    'jquery-ui': "vendor/jquery-ui-1.10.2.custom.min",
+    'jquery-layout': "vendor/jquery.layout-latest.min",
+    'jquery.ui.widget': "vendor/jquery.ui.widget",
+    'jquery.iframe-transport': "vendor/jquery.iframe-transport",
+    'jquery-fileupload': "vendor/jquery.fileupload",
+    'jquery-placeholder': "vendor/jquery.placeholder",
+    'jquery-tokeninput': "vendor/jquery.tokeninput",
+    'jquery-timer': "vendor/jquery.timer",
+    'jquery-pnotify': "vendor/jquery.pnotify.min",
+    'bootstrap': "vendor/bootstrap.min",  // twitter bootstrap
+    'plugins': "app/plugins", // jquery or custom
+    'moment': 'vendor/moment.min',
+    'moment-timezone': 'vendor/moment-timezone.min',
+    'calendar': "vendor/fullcalendar",
+    'tinyMCE': "vendor/tinymce/tinymce.min",
+    'vcard': "vendor/vcard/vcard",
+    'vcf': "vendor/vcard/vcf",
+    'html5shiv': "vendor/html5shiv",
+    'text': "vendor/text",  // requirejs plugin to load text resources or templates
+    templates: '../templates' // short cut so we can put our html outside the js dir
+  }
+})

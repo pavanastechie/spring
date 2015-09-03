@@ -1,0 +1,34 @@
+<div id="user-edit-new">
+
+<form >
+	<div  id="user-container">
+	<h3>New/Edit User</h3>
+              <label id="error_msg" style="color: red"></label>
+     <div class="form-group">
+      <input id="userId"  type="hidden"/>
+        <label for="username" class="control-label col-xs-2">UserName:</label>
+        <div style="margin-bottom: 7px;" class="col-xs-10">
+            <input class="form-control" id="username" placeholder="UserName">
+        </div>
+        
+        <label for="email" class="control-label col-xs-2">Email:</label>
+        <div style="margin-bottom: 7px;" class="col-xs-10">
+            <input  class="form-control" id="email" placeholder="Email">
+        </div>
+        
+        <label for="password" class="control-label col-xs-2">Password:</label>
+        <div style="margin-bottom: 7px;" class="col-xs-10">
+            <input type="password" class="form-control" id="password" placeholder="Password">
+        </div>
+      
+         <label for="role" class="control-label col-xs-2">Role:</label>
+        <div style="margin-bottom: 5px;" class="col-xs-10">
+            <input  class="form-control" id="role" placeholder="Role">
+        </div>
+        <span>( Available roles are [ROLE_ADMIN, ROLE_USER])</span>
+        <div>
+         <input class="btn btn-primary " id="submit_btn" style="margin-top: 25px;" type="button" value="Save">
+         </div>
+    </div>   
+</form>
+</div>

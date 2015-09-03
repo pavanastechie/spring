@@ -1,0 +1,214 @@
+/*  This template was created by Mantis-a [http://www.mantisa.cz/]. For more templates visit Free website templates [http://www.mantisatemplates.com/]. */
+
+
+
+/* CSS Document */
+
+
+/* General */
+
+* { margin: 0; padding: 0; list-style-type: none;}
+
+html { height: 100%; font-size: 62.5% }
+
+body {
+height: 100%;
+background-color: #10578D;
+text-align: center;
+font: 1.2em Verdana, Arial, Helvetica, sans-serif;
+}
+
+a:link, a:visited {
+color: #004F8B;
+text-decoration: none;
+font-weight: bolder;
+outline: medium none;
+}
+
+a:hover {
+text-decoration: none;
+color:#000;
+}
+
+.left-nav {
+height: 40px;
+    margin-top: 0;
+    width: 285px;
+}
+
+.left-nav:hover {
+background: #004f8b;
+color: #ffffff;
+
+}
+
+.left-nav:hover a{
+color: #ffffff;
+
+}
+
+.event-list {
+position: relative;
+    top: 12px;
+
+}
+
+.selected {
+background-color: #004f8b;
+}
+
+.selected a {
+color: #FFFFFF;
+}
+
+table {
+    border-collapse: collapse;
+    border-left-style: hidden;
+    border-right-style: hidden;
+    border-top-style: hidden;
+}
+
+table, td, th {
+    border: 1px solid black;
+}
+
+/* Cleaner */
+
+
+
+
+/* Skip menu */
+
+
+
+/* Images */
+
+
+
+/* Wrapper */
+
+/* #wrapper {
+width: 850px;
+margin: 60px auto 0 auto;
+padding-bottom: 90px;
+text-align: left;
+} */
+
+
+/* Headings, paragraphs */
+
+.title {
+letter-spacing: 1px;
+width: 39em;
+}
+
+
+
+.title p {
+color: #FFFFFF;
+margin: 4px 0 0 21px;
+padding-bottom: 12px;
+}
+
+h1 {
+font: normal 2.4em Georgia, "Times New Roman", Times, serif;
+color: #FFFFFF;
+padding-top: 25px;
+margin-left: 20px;
+}
+
+h1 a:link, h1 a:visited {
+color: #FFFFFF;
+text-decoration: none;
+font-weight: normal;
+}
+
+h1 span {
+color: #FFB849;
+}
+
+h2 {
+font: normal 1.5em Georgia, "Times New Roman", Times, serif;
+color: #004F8B;
+letter-spacing: 1px;
+padding-left: 25px;
+margin-bottom: 7px;
+}
+
+
+/* Menu */
+
+ul.menu {
+list-style-type: none;
+}
+
+ul.menu li {
+padding: 18px 0;
+}
+
+ul.menu li a, ul.menu li a:visited {
+color: #FFFFFF;
+font-weight: normal;
+text-decoration: none;
+padding: 4px 7px;
+}
+
+ul.menu li a:hover, ul.menu li a.active {
+background-color: #002F53;
+}
+
+ul.menu li.last {
+background: none;
+}
+
+
+/* Content box  */
+
+#dashboard-body-container {
+width: 90%;
+margin-top: 50px;
+box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+margin-left: 65px;
+}
+
+#dashboard-body{
+width: 100%;
+
+}
+.column-left {
+float: left;
+width: 25%;
+height: 385px;
+text-align: center;
+color: #000;
+background: #fff;
+padding: 0em 0 5em 0;
+}
+
+.column-left h3 {
+font: normal 1.5em Georgia, "Times New Roman", Times, serif;
+margin: 10px 0 7px 0;
+letter-spacing: 1px;
+}
+
+.column-right {
+margin: 0 0 0 286px;
+}
+
+
+
+
+
+.box-in {
+background-color: #FFFFFF;
+padding: 0.8em 0 5em 0;
+height: 385px;
+}
+
+.box-in p {
+line-height: 1.6;
+margin: 0 0 10px 25px;
+color: #242424;
+}
+
+/* Footer */

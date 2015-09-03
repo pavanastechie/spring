@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.web.platform.mail</groupId>
+  <artifactId>platform-webmail-ui</artifactId>
+  <name>platform-webmail-ui</name>
+  <packaging>pom</packaging>
+  <version>2.1.1-SNAPSHOT</version>
+
+  <properties>
+    <!-- get the build number, use to bust browser cache -->
+    <build.version.number>${env.BUILD_NUMBER}</build.version.number>
+  </properties>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>com.github.searls</groupId>
+      <artifactId>jasmine-maven-plugin</artifactId>
+      <version>1.3.1.2</version>
+    </dependency>
+  </dependencies>
+
+
+  <build>
+
+    <plugins>
+      <!--
+      <plugin>
+          <groupId>com.github.searls</groupId>
+          <artifactId>jasmine-maven-plugin</artifactId>
+          <version>1.3.1.2</version>
+          <executions>
+              <execution>
+                  <goals>
+                      <goal>test</goal>
+                  </goals>
+              </execution>
+          </executions>
+          <configuration>
+              <debug>true</debug>
+              <specRunnerTemplate>REQUIRE_JS</specRunnerTemplate>
+              <jsSrcDir>${project.basedir}/src/main/resources/js</jsSrcDir>
+              <jsTestSrcDir>${project.basedir}/src/test/javascript</jsTestSrcDir>
+              <preloadSources>
+                  <source>app/main.js</source>
+                  <source>vendor/require-2.1.5.js</source>
+                  <source>vendor/require-jquery.js</source>
+              </preloadSources>
+              HtmlUnit complains on console logging.  Workarounds exist.  just not implemented
+              <browserVersion>INTERNET_EXPLORER_9</browserVersion>
+          </configuration>
+      </plugin>
+      -->
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>2.4</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <appendAssemblyId>false</appendAssemblyId>
+          <attach>true</attach>
+          <descriptors>
+            <descriptor>src/main/assembly/config-assembly.xml</descriptor>
+          </descriptors>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>com.github.bringking</groupId>
+        <artifactId>requirejs-maven-plugin</artifactId>
+        <version>2.0.2</version>
+        <executions>
+          <execution>
+            <phase>compile</phase>
+            <goals>
+              <goal>optimize</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <!-- optional path to a nodejs executable -->
+          <!-- For LOCAL use, never commit: <nodeExecutable>C:\Program Files (x86)\nodejs\node</nodeExecutable> -->
+          <nodeExecutable>/usr/bin/node</nodeExecutable>
+          <!-- path to optimizer json config file -->
+          <configFile>${basedir}/src/main/build/app.build.js</configFile>
+          <!-- optional path to optimizer executable -->
+          <optimizerFile> ${basedir}/src/main/build/r.js</optimizerFile>
+          <!-- optional parameters to optimizer executable -->
+          <optimizerParameters>
+            <parameter>optimize=uglify</parameter>
+            <parameter>appDir=${basedir}/src/main/resources/js</parameter>
+            <parameter>baseUrl=.</parameter>
+            <parameter>dir=${basedir}/src/main/resources/dist</parameter>
+          </optimizerParameters>
+          <!--
+          Whether or not to process configFile with maven filters.
+          If you use this option, some options in your configFile
+          must resolve to absolute paths (see below)
+          -->
+          <filterConfig>
+            true
+          </filterConfig>
+          <!-- Skip requirejs optimization if true -->
+          <skip>
+            false
+          </skip>
+        </configuration>
+      </plugin>
+
+    </plugins>
+  </build>
+
+</project>
